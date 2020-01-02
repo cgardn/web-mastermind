@@ -1,19 +1,3 @@
-#   TODO
-#
-#   create separate display for web, only use board object to hold the board data, translate
-#
-#   looping game menu, i.e. lets you start a new game or quit after current game ends
-#
-#   - human/player stuff
-#   -  separate out the peg results, so it can be easily passed to the computer player or displayed (well, AND displayed)
-#
-#   colors and fancy graphics
-#   computer player/guesses, let the player choose to make the code or break it
-#     - make sure to pause and wait for enter key between each computer guess
-#   score tracking
-#   two player mode for humans, i.e. each game player gets to pick whether the two players are human or computer
-#   can let two computers duke it out as well, still wait for input to advance a turn
-
 require './mastermind-display-term.rb'
 # require './mastermind-display-web.rb'
 
