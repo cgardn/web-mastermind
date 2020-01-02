@@ -12,20 +12,20 @@ def inputTurn(guess)
 end
 
 get '/' do
-  erb :index
+  erb :index, :layout => :layout_core
 end
 
 get '/game' do
   out = session.to_s
 
   if session[:game].gamestate == "ingame"
-    erb :game, :locals => {:board => session[:game].display_board_web}
+    erb :game, :layout => :layout_core, :locals => {:board => session[:game].display_board_web}
   elsif session[:game].gamestate == "win"
-    erb :win, :layout => :layout_game, :locals => {:hiddencode => session[:game].hidden_code}
+    erb :win, :layout => :layout_core, :locals => {:hiddencode => session[:game].hidden_code}
   elsif session[:game].gamestate == "lose"
-    erb :lose, :layout => :layout_game, :locals => {:hiddencode => session[:game].hidden_code}
+    erb :lose, :layout => :layout_core, :locals => {:hiddencode => session[:game].hidden_code}
   else
-    erb :index
+    erb :index, :layout => :layout_core
   end
 
 end

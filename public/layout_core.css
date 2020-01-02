@@ -1,0 +1,15 @@
+#game-content {
+        grid-area: content;
+        justify-self: center;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+        background-color: #123456;
+}
+
+body {
+        display: grid;
+        grid-template-columns: 1fr 400px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: ". content .";
+}
